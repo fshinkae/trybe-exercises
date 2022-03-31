@@ -1,0 +1,29 @@
+# comando para baixar a imagem com a tag especica
+docker pull debian:stable-slim
+
+# comando para criar um container no modo iterativo
+docker container create -it debian:stable-slim
+
+# comando para executar um container no modo iterativo
+docker container run -it debian:stable-slim
+## após o comando acima, foi utilizado para retornar os dados de distribuição o comando:
+cat /etc/*-release 
+### para fechar foi dado exit.
+
+# comando para verificar a lista de container:
+docker ps -l
+
+# comando para listar os containers existentes:
+docker container ls -a
+
+#comando para ativar o container anterior:
+docker start <name>
+
+#comando para atacar o container:
+docker attach <name>
+
+# comando para verificar a versão da imagem: 
+cat /etc/deban_version
+
+#comando para remover o container:
+doccker container rm <name>
