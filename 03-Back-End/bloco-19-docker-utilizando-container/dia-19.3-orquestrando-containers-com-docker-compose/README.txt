@@ -35,3 +35,12 @@ Por padrão o ghost utiliza um sqlite interno para salvar as informações, por�
 6. Para definir o usuário ( root ) e senha (a mesma que definimos no nosso mysql), utilize respectivamente as envs database__connection__user e database__connection__password .
 7. Utilize a opção depends_on para criar relações de dependências entre os serviços.
 8. Suba o ambiente com o novo arquivo usando o docker-compose e então acesse a porta.
+
+# Exercicio 4
+
+Agora vamos praticar os conceitos de volumes e networks .
+
+1. Configure o nosso serviço mysql para utilizar um volume, conforme vimos no conteúdo, crie o volume db-data e utilize o caminho target /var/lib/mysql .
+2. Ao invés de utilizar a rede padrão criada pelo Compose, defina uma rede chamada my-network para a comunicação dos dois serviços.
+3. Defina a política de restart para always em todos os serviços;
+4. Suba o ambiente com o novo arquivo usando o docker-compose e então acesse-o.
