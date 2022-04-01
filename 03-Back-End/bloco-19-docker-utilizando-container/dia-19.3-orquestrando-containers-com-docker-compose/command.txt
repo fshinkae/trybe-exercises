@@ -38,4 +38,7 @@ docker ps
 11. Remover imagem criada
 
   docker rmi -f <ID>
-  
+
+Comando exercicio 6
+
+ docker-compose up --build -d

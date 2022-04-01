@@ -44,3 +44,13 @@ Agora vamos praticar os conceitos de volumes e networks .
 2. Ao invés de utilizar a rede padrão criada pelo Compose, defina uma rede chamada my-network para a comunicação dos dois serviços.
 3. Defina a política de restart para always em todos os serviços;
 4. Suba o ambiente com o novo arquivo usando o docker-compose e então acesse-o.
+
+# Exercicio 5
+
+Agora vamos criar um novo arquivo Compose, para rodarmos uma aplicação React, conforme vimos alguns exemplos do conteúdo:
+
+1. Inicie uma novo projeto ReactJS utilizando o create-react-app ;
+2. Crie o Dockerfile , conforme vimos na aula passada;
+3. Crie um novo arquivo Compose utilizando a versão 3 ;
+4. Defina um serviço no arquivo para nosso app , para isso utilize a opção build para apontar para o Dockerfile ;
+5. Publique a porta exposta no Dockerfile fazendo bind para a porta 8080 do localhost ;
