@@ -1,0 +1,41 @@
+1. Criado um arquivo HTML com o nome index.html
+
+2. Comando utilizado para criar um container mantendo um servidor httpd:2.4 Apache && Comando utilizado também para vincular sua porta 4545 da minha maquina local:
+
+ docker run -d --name site-trybe2 -p 4545:80 -v "/home/fshinkae/trybe-exercicios/03-Back-End/bloco-19-docker-utilizando-container/dia-19.3-orquestrando-containers-com-docker-compose:/usr/local/apache2/htdocs" httpd:2.4
+
+3. Link do browser para acessar a página HTML
+
+  http://localhost:4545/primeiro-teste.html
+
+4. Alterado arquivo HTML acrescentando <p>
+
+5. Obter o id do container com commando:
+
+docker ps
+
+6. Obter o mounts através da propriedade source, mostrando o volume do container
+
+  docker inspect <ID>
+
+7. Comando para parar o container httpd:2.4 
+
+  docker stop <ID>
+
+8. Comando para excluir o container
+
+  Docker rm <ID>
+
+9. Verificar a pasta
+
+  cd <caminho>
+  ls -la
+
+10. Verificar as imagens
+
+  docker imagens
+
+11. Remover imagem criada
+
+  docker rmi -f <ID>
+  
