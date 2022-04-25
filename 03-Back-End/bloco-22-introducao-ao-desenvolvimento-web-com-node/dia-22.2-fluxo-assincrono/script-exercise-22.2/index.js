@@ -1,4 +1,4 @@
-// Exercise 2
+// Exercise 3
 
 function mathFunction(a, b, c) {
 	return new Promise((resolve, reject) => {
@@ -22,13 +22,17 @@ function getRandomNumber() {
 	return Math.floor(Math.random() * 100 + 1);
 }
 
-function callMath() {
+async function callMath() {
 	const randomNumbers = Array.from({ length : 3 }).map(getRandomNumber);
 	console.log(randomNumbers);
 
-	mathFunction(...randomNumbers)
-		.then((result) => console.log(result))
-		.catch((err) => console.error(err.message));
+
+	try {
+		const result = await mathFunction(...randomNumbers);
+		console.log(result);
+	} catch (err) {
+		console.error(err.message);
+	}
 }
 
 callMath();
